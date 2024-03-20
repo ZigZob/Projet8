@@ -1,4 +1,18 @@
-.Banner {
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
     height: 223px;
-    object-fit: contain;
+    font-size: 48px;
+    margin: 0 100px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.bannerImgHome {
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../../assets/banner1P8.png);
+    background-color: rgba(0, 0, 0, 0.6);
 }

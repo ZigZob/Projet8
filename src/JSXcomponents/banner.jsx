@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import "../sass/main.scss"
-import BannerImg from '../assets/banner1P8.png'
-function Banner() {
+
+function Banner({ bannerImg, title }) {
     return (
-        <img className="Banner" src={BannerImg}></img>
+        <section className={`banner ${bannerImg}`}>{title}</section>
     )
 }
-export default Banner
+export default Banner;
