@@ -1,0 +1,22 @@
+.Error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        color: #FF6060;
+        font-size: 288px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__subtitle {
+        color: #FF6060;
+        font-size: 36px;
+    }
+
+    &__link {
+        font-size: 18px;
+    }
+}

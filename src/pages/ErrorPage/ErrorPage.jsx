@@ -1,10 +1,13 @@
 import React from 'react'
-
+import { Link } from "react-router-dom"
+import './_errorPage.scss'
 function ErrorPage() {
     return (
-        <div>
-            <h1>Oups 🙈 Cette page n'existe pas</h1>
-        </div>
+        <section className='Error'>
+            <p className='Error__title'>404</p>
+            <p className='Error__subtitle'>Oups! La page que vous demandez n'existe pas.</p>
+            <Link className='Error__link' to="/">Retourner sur la page d'accueil</Link>
+        </section>
     )
 }
 

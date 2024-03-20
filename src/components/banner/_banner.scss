@@ -1,18 +1,25 @@
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 223px;
-    font-size: 48px;
     margin: 0 100px;
     border-radius: 25px;
-    box-shadow: 0px 4px 4px 0px #00000040;
-}
+    position: relative;
 
-.bannerImgHome {
-    background-size: cover;
-    background-position: center center;
-    background-image: url(../../assets/banner1P8.png);
-    background-color: rgba(0, 0, 0, 0.6);
+    &__img {
+        border-radius: 25px;
+        height: 223px;
+        width: 100%;
+        object-fit: cover;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        filter: brightness(40%);
+    }
+
+    &__title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: white;
+        transform: translate(-50%, calc(-50% - 4px));
+        font-size: 48px;
+        font-weight: 700;
+        margin-block: 0;
+    }
 }

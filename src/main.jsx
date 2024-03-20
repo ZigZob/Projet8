@@ -16,12 +16,14 @@ root.render(
   <React.StrictMode>
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path={"/Logement/:LogementIndex"} element={<Logement />} />
-        <Route path="/A-propos" element={<APropos />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path={"/Logement/:LogementIndex"} element={<Logement />} />
+          <Route path="/A-propos" element={<APropos />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </main>
       <Footer />
     </Router>
   </React.StrictMode>
