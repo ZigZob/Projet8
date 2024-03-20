@@ -1,7 +1,12 @@
 .banner {
-    margin: 0 100px;
-    border-radius: 25px;
     position: relative;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    border-radius: 25px;
+    text-align: center;
+
+
 
     &__img {
         border-radius: 25px;
@@ -17,9 +22,10 @@
         left: 50%;
         top: 50%;
         color: white;
-        transform: translate(-50%, calc(-50% - 4px));
+        transform: translate(-50%, -50%);
         font-size: 48px;
         font-weight: 700;
-        margin-block: 0;
+        width: 100%;
+        justify-content: center;
     }
 }

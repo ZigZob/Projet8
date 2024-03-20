@@ -1,8 +1,11 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding: 40px 100px;
-    font-size: 34px;
+    padding: 40px 0;
+    font-size: 24px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
 
     nav {
         display: flex;
