@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import { useParams } from 'react-router-dom'
-import Header from './JSXcomponents/Header'
-import Footer from './JSXcomponents/Footer'
-import Home from './JSXpages/Home'
-import APropos from './JSXpages/APropos'
-import ErrorPage from './JSXpages/ErrorPage'
-// import FicheLogement from './JSXpages/FicheLogement'
+import './base/_reset.scss'
+import Header from './layout/header/Header'
+import Footer from './layout/footer/Footer'
+import Home from './pages/home/Home'
+import APropos from './pages/a-propos/A-propos'
+import ErrorPage from './pages/ErrorPage/ErrorPage'
+import Logement from './pages/logement/Logement'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const { LogementIndex } = useParams()
@@ -17,8 +18,8 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path={`/Fiche-Logement/${LogementIndex}`} element={<FicheLogement />} /> */}
-        <Route path="/A-Propos" element={<APropos />} />
+        <Route path={"/Logement/:LogementIndex"} element={<Logement />} />
+        <Route path="/A-propos" element={<APropos />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

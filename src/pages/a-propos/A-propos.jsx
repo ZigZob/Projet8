@@ -1,10 +1,9 @@
 import React from 'react'
-import "../sass/main.scss"
 
-function FicheLogement() {
+function APropos() {
     return (
         <div className='bob'>Hello World</div>
     )
 }
 
-export default FicheLogement
+export default APropos

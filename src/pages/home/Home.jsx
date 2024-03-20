@@ -1,7 +1,6 @@
 import React from 'react'
-import "../sass/main.scss"
-import Banner from '../JSXcomponents/Banner'
-
+import Banner from '../../components/banner/Banner'
+import './_home.scss'
 function Home() {
   return (
     <main>
