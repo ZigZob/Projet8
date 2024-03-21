@@ -1,0 +1,52 @@
+.collapse {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    margin: auto;
+
+
+    &__title {
+        background-color: #FF6060;
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        font-weight: 700;
+        align-items: center;
+        padding-left: 10px;
+        cursor: pointer;
+        border-radius: 10px 10px 0 0;
+    }
+
+    &__contentWrapper {
+        display: grid;
+        grid-template-rows: 0fr;
+
+        transition: grid-template-rows 0.5s ease-in-out;
+
+        &--open {
+            grid-template-rows: 1fr;
+        }
+    }
+
+    &__contentWrapper>div {
+        overflow: hidden;
+    }
+
+    &__content {
+        background-color: #F6F6F6;
+        color: black;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    &__icon {
+        transition: rotate 0.3s ease-in-out;
+
+        &--open {
+            rotate: 180deg;
+        }
+    }
+}
