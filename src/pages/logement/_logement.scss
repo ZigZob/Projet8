@@ -1,0 +1,13 @@
+.presentation {}
+
+.qualities {}
+
+.details {
+    display: flex;
+    flex: 1;
+    max-width: 1240px;
+
+    &>* {
+        max-width: 50%;
+    }
+}

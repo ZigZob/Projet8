@@ -1,6 +1,8 @@
 .gallery {
     background-color: #F6F6F6;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     border-radius: 25px;
     width: 100%;
     max-width: 1240px;
