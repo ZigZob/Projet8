@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import './_errorPage.scss'
-function ErrorPage() {
+export default function ErrorPage() {
     return (
         <section className='Error'>
             <p className='Error__title'>404</p>
@@ -10,5 +10,3 @@ function ErrorPage() {
         </section>
     )
 }
-
-export default ErrorPage

@@ -1,7 +1,8 @@
 import React from 'react';
 import './_banner.scss'
+import PropTypes from 'prop-types'
 
-function Banner({ bannerImg, title }) {
+export default function Banner({ bannerImg, title }) {
     return (
         <section className='banner'>
             <img className={`banner__img ${title === '' ? 'banner__img--noTitle' : ''}`} src={bannerImg}></img>
@@ -9,4 +10,8 @@ function Banner({ bannerImg, title }) {
         </section>
     )
 }
-export default Banner;
+
+Banner.propTypes = {
+    bannerImg: PropTypes.string.isRequired,
+    title: PropTypes.string
+}

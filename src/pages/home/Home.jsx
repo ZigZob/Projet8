@@ -5,8 +5,7 @@ import './_home.scss'
 import LogementData from '../../data/data.json'
 import bannerUrl from '../../assets/banner1P8.png'
 
-function Home() {
-  console.log(LogementData)
+export default function Home() {
   return (
     <React.Fragment>
       <Banner bannerImg={bannerUrl}
@@ -19,5 +18,3 @@ function Home() {
     </React.Fragment>
   )
 };
-
-export default Home

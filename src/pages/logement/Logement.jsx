@@ -1,19 +1,18 @@
 import React from 'react'
-import LogementData from '../../data/data.json'
 import Carousel from '../../components/carousel/Carousel'
 import Collapse from '../../components/collapse/Collapse'
 import Ratings from '../../components/ratings/Ratings'
 import './_logement.scss'
+import PropTypes from 'prop-types'
 
-console.log(LogementData[0])
-function Logement({ logement }) {
-    console.log(logement)
+export default function Logement({ logement }) {
+    //console.log(logement.pictures) //a effacer apres mentorat
     const brokenName = logement.host.name.split(' ').map((word, index) => (
         <span key={index} className='hostNameWords'>{word}</span>
     ))
     return (
         <React.Fragment>
-            <Carousel pictures={logement.pictures} />
+            <Carousel imgUrlArray={logement.pictures} />
             <section className='presentation'  >
                 <div className='logement' >
                     <h1 className='logement__title'>{logement.title}</h1>
@@ -53,4 +52,6 @@ function Logement({ logement }) {
     )
 }
 
-export default Logement
+Logement.propTypes = {
+    logement: PropTypes.object.isRequired
+}

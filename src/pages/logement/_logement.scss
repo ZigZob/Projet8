@@ -54,19 +54,18 @@
 
         &__tag {
             display: flex;
+            padding: 5px;
             align-items: center;
             justify-content: center;
-            width: 115px;
+            min-width: 115px;
             background-color: #FF6060;
             color: white;
             font-size: 14px;
             font-weight: 700;
             border-radius: 10px;
-            height: 25px;
+            max-height: 25px;
         }
     }
-
-    ratingsWrapper {}
 }
 
 .details {

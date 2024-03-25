@@ -1,9 +1,9 @@
 import React from 'react'
 import './_card.scss'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-function Card({ logement }) {
-    console.log(logement)
+export default function Card({ logement }) {
     return (
         < React.Fragment >
             <Link logement={logement} to={`/Logement/${logement.id}`}>
@@ -16,4 +16,6 @@ function Card({ logement }) {
     )
 }
 
-export default Card
+Card.propTypes = {
+    logement: PropTypes.object.isRequired
+}

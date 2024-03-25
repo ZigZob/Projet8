@@ -1,43 +1,49 @@
 import './_carousel.scss'
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
-export default function Carousel(logement) {
-
+export default function Carousel({ imgUrlArray }) {
+    // console.log({ imgUrlArray }) // a effacer apres mentorat
     const [carouselPosition, setCarouselPosition] = useState(0)
 
     function changeSlide(event) {
         if (event.target.classList.contains("carousel__icon--previous")) {
             setCarouselPosition(carouselPosition =>
-                carouselPosition === 0 ? logement.pictures.length - 1 : carouselPosition - 1
+                carouselPosition === 0 ? imgUrlArray.length - 1 : carouselPosition - 1
 
             );
         }
         else if (event.target.classList.contains("carousel__icon--next")) {
             setCarouselPosition(carouselPosition =>
-                carouselPosition === logement.pictures.length - 1 ? 0 : carouselPosition + 1
+                carouselPosition === imgUrlArray.length - 1 ? 0 : carouselPosition + 1
 
             );
         }
+        else return
     }
 
-    if (logement.pictures.length === 1) {
+    if (imgUrlArray.length === 1) {
         return (
-            <img className="carouselSingleImg" src={logement.pictures[0]}></img>
+            <img className="carouselSingleImg" src={imgUrlArray[0]}></img>
         )
     }
-    else if (logement.pictures.length > 1) {
+    else if (imgUrlArray.length > 1) {
         return (
             <div className='carousel' >
 
-                {logement.pictures.map((picture) => (
+                {imgUrlArray.map((picture) => (
                     <img key={picture} className="carousel__img" src={picture} style={{ translate: `${-100 * carouselPosition}%` }}></img>))
                 }
 
                 <i onClick={(event) => changeSlide(event)} className="fa-2xl fa-solid fa-chevron-left carousel__icon carousel__icon--previous"></i>
                 <i onClick={(event) => changeSlide(event)} className="fa-2xl fa-solid fa-chevron-right carousel__icon carousel__icon--next"></i>
-                <div className='carousel__position' >{carouselPosition + 1}/{logement.pictures.length}</div>
+                <div className='carousel__position' >{carouselPosition + 1}/{imgUrlArray.length}</div>
             </div>
         )
     }
     else return
+}
+
+Carousel.propTypes = {
+    imgUrlArray: PropTypes.array.isRequired
 }
