@@ -17,7 +17,7 @@ function Ratings({ rating }) {
     const icons = Array(5).fill(null);
 
     return (
-        <div>
+        <div className="starRating" >
             {icons.map((icon, index) => (
                 <i key={index} className={`fa-solid fa-star ${index < rating ? 'filled' : 'empty'}`}></i>
             ))}

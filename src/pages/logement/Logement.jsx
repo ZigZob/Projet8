@@ -3,26 +3,30 @@ import LogementData from '../../data/data.json'
 import Carousel from '../../components/carousel/Carousel'
 import Collapse from '../../components/collapse/Collapse'
 import Ratings from '../../components/ratings/Ratings'
+import './_logement.scss'
 
 console.log(LogementData[0])
 function Logement({ logement }) {
     console.log(logement)
+    const brokenName = logement.host.name.split(' ').map((word, index) => (
+        <span key={index} className='hostNameWords'>{word}</span>
+    ))
     return (
         <React.Fragment>
-            <Carousel />
+            <Carousel pictures={logement.pictures} />
             <section className='presentation'  >
-                <div className='' >
-                    <h1 className=''>{logement.title}</h1>
-                    <p className=''>{logement.location}</p>
+                <div className='logement' >
+                    <h1 className='logement__title'>{logement.title}</h1>
+                    <p className='logement__subtitle'>{logement.location}</p>
                 </div>
-                <div className=''>
-                    <p className=''>{logement.host.name}</p>
-                    <img className='' src={logement.host.picture}></img>
+                <div className='host'>
+                    <p className='host__name'>{brokenName}</p>
+                    <img className='host__picture' src={logement.host.picture}></img>
                 </div>
             </section>
-            <section className='qualities'>
+            <section className='properties'>
                 <div className='tagsWrapper'>
-                    {logement.tags.map((tag) => <span className='tagWrapper__tag' key={tag}>{tag}</span>)}
+                    {logement.tags.map((tag) => <span className='tagsWrapper__tag' key={tag}>{tag}</span>)}
                 </div>
                 <div className='ratingsWrapper'>
                     <Ratings rating={logement.rating} />

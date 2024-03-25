@@ -1,0 +1,50 @@
+.carouselSingleImg {
+    width: 100%;
+    max-width: 1240px;
+    height: 415px;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.carousel {
+    overflow: hidden;
+    max-width: 1240px;
+    margin: auto;
+    border-radius: 25px;
+    height: 415px;
+    position: relative;
+
+    &__position {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        cursor: default;
+        color: white;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        color: white;
+
+        &--previous {
+            left: 10px;
+        }
+
+        &--next {
+            right: 10px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+        flex-grow: 0;
+        transition: translate 300ms ease-in-out;
+    }
+}

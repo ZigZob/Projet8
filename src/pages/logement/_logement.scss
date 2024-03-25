@@ -1,13 +1,83 @@
-.presentation {}
+.presentation {
+    max-width: 1240px;
+    margin: 40px auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
-.qualities {}
+    .logement {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title {
+            font-size: 36px;
+            color: #FF6060;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+    }
+
+    .host {
+        display: flex;
+        gap: 10px;
+
+        &__name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .hostNameWords {
+                font-size: 18px;
+                color: #FF6060;
+            }
+        }
+
+        &__picture {
+            border-radius: 50%;
+        }
+    }
+}
+
+.properties {
+    margin: 40px auto;
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .tagsWrapper {
+        gap: 10px;
+
+        &__tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 115px;
+            background-color: #FF6060;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 10px;
+            height: 25px;
+        }
+    }
+
+    ratingsWrapper {}
+}
 
 .details {
+    margin: 40px auto;
     display: flex;
     flex: 1;
     max-width: 1240px;
+    gap: 40px;
 
     &>* {
+        width: 100%;
         max-width: 50%;
     }
 }
