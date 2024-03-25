@@ -18,14 +18,8 @@ root.render(
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          {LogementData.map((logement, index) => (
-            <Route
-              key={logement.id}
-              path={`/Logement/${logement.id}`}
-              element={<Logement logement={LogementData[index]} />}
-            />
-          ))}
           <Route path="/A-propos" element={<APropos />} />
+          <Route path="/Logement/:logementId" element={<Logement />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
