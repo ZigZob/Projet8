@@ -103,8 +103,6 @@
                 width: 32px;
             }
         }
-
-        .ratingsWrapper {}
     }
 }
 
@@ -115,8 +113,17 @@
     max-width: 1240px;
     gap: 40px;
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     &>* {
         width: 100%;
         max-width: 50%;
+
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+        }
     }
 }
