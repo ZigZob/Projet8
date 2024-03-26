@@ -2,10 +2,25 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 40px 0;
-    font-size: 24px;
     width: 100%;
     max-width: 1240px;
     margin: 0 auto;
+    align-items: center;
+
+    @media screen and (max-width: 1280px) {
+        max-width: calc(100% - 40px);
+    }
+
+    & svg {
+        @media screen and (max-width: 768px) {
+            width: 145px;
+            height: 47px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+    }
 
     nav {
         display: flex;

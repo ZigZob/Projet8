@@ -5,24 +5,79 @@
     display: flex;
     justify-content: space-between;
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
     .logement {
         display: flex;
         flex-direction: column;
-        justify-content: center;
 
         &__title {
             font-size: 36px;
             color: #FF6060;
+
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+            }
         }
 
         &__subtitle {
             font-size: 18px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+
+        .tagsWrapper {
+            margin-top: 20px;
+            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+
+            &__tag {
+                display: flex;
+                padding: 5px;
+                align-items: center;
+                justify-content: center;
+                min-width: 115px;
+                background-color: #FF6060;
+                color: white;
+                font-size: 14px;
+                font-weight: 700;
+                border-radius: 10px;
+                max-height: 25px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 10px;
+                    min-width: 84px;
+                }
+            }
         }
     }
 
     .host {
         display: flex;
         gap: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        &__wrapper {
+            display: flex;
+            gap: 20px;
+
+            @media screen and (max-width: 768px) {
+                order: 2;
+            }
+        }
 
         &__name {
             display: flex;
@@ -33,43 +88,28 @@
             .hostNameWords {
                 font-size: 18px;
                 color: #FF6060;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 12px;
+                }
             }
         }
 
         &__picture {
             border-radius: 50%;
+            width: 64px;
+
+            @media screen and (max-width: 768px) {
+                width: 32px;
+            }
         }
-    }
-}
 
-.properties {
-    margin: 40px auto;
-    max-width: 1240px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    .tagsWrapper {
-        gap: 10px;
-
-        &__tag {
-            display: flex;
-            padding: 5px;
-            align-items: center;
-            justify-content: center;
-            min-width: 115px;
-            background-color: #FF6060;
-            color: white;
-            font-size: 14px;
-            font-weight: 700;
-            border-radius: 10px;
-            max-height: 25px;
-        }
+        .ratingsWrapper {}
     }
 }
 
 .details {
-    margin: 40px auto;
+    margin: 0 auto 40px auto;
     display: flex;
     flex: 1;
     max-width: 1240px;

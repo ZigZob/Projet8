@@ -5,6 +5,10 @@
     object-fit: cover;
     margin: auto;
     border-radius: 25px;
+
+    @media screen and (max-width: 768px) {
+        height: 255px;
+    }
 }
 
 .carousel {
@@ -14,6 +18,10 @@
     border-radius: 25px;
     height: 415px;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+        height: 255px;
+    }
 
     &__position {
         position: absolute;

@@ -25,6 +25,11 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    @media screen and (max-width: 1280px) {
+        max-width: calc(100% - 40px);
+        margin: auto;
+    }
 }
 
 a {

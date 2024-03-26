@@ -8,7 +8,6 @@ import Home from './pages/home/Home'
 import APropos from './pages/a-propos/A-propos'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
 import Logement from './pages/logement/Logement'
-import LogementData from './data/data.json'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

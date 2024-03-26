@@ -22,18 +22,18 @@ export default function Logement() {
                     <div className='logement' >
                         <h1 className='logement__title'>{logement.title}</h1>
                         <p className='logement__subtitle'>{logement.location}</p>
+                        <div className='tagsWrapper'>
+                            {logement.tags.map((tag) => <span className='tagsWrapper__tag' key={tag}>{tag}</span>)}
+                        </div>
                     </div>
                     <div className='host'>
-                        <p className='host__name'>{brokenName}</p>
-                        <img className='host__picture' src={logement.host.picture}></img>
-                    </div>
-                </section>
-                <section className='properties'>
-                    <div className='tagsWrapper'>
-                        {logement.tags.map((tag) => <span className='tagsWrapper__tag' key={tag}>{tag}</span>)}
-                    </div>
-                    <div className='ratingsWrapper'>
-                        <Ratings rating={logement.rating} />
+                        <div className='host__wrapper'>
+                            <p className='host__name'>{brokenName}</p>
+                            <img className='host__picture' src={logement.host.picture}></img>
+                        </div>
+                        <div className='ratingsWrapper'>
+                            <Ratings rating={logement.rating} />
+                        </div>
                     </div>
                 </section>
                 <section className='details'>

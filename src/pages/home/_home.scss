@@ -7,4 +7,8 @@
     width: 100%;
     max-width: 1240px;
     margin: 40px auto;
+
+    @media screen and (max-width: 768px) {
+        background-color: white;
+    }
 }
