@@ -3,23 +3,17 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 
 export default function Carousel({ imgUrlArray }) {
-    // console.log({ imgUrlArray }) // a effacer apres mentorat
     const [carouselPosition, setCarouselPosition] = useState(0)
 
-    function changeSlide(event) {
-        if (event.target.classList.contains("carousel__icon--previous")) {
-            setCarouselPosition(carouselPosition =>
-                carouselPosition === 0 ? imgUrlArray.length - 1 : carouselPosition - 1
-
-            );
-        }
-        else if (event.target.classList.contains("carousel__icon--next")) {
-            setCarouselPosition(carouselPosition =>
-                carouselPosition === imgUrlArray.length - 1 ? 0 : carouselPosition + 1
-
-            );
-        }
-        else return
+    function previousSlide() {
+        setCarouselPosition(carouselPosition =>
+            carouselPosition === 0 ? imgUrlArray.length - 1 : carouselPosition - 1
+        )
+    }
+    function nextSlide() {
+        setCarouselPosition(carouselPosition =>
+            carouselPosition === imgUrlArray.length - 1 ? 0 : carouselPosition + 1
+        )
     }
 
     if (imgUrlArray.length === 1) {
@@ -34,9 +28,8 @@ export default function Carousel({ imgUrlArray }) {
                 {imgUrlArray.map((picture) => (
                     <img key={picture} className="carousel__img" src={picture} style={{ translate: `${-100 * carouselPosition}%` }}></img>))
                 }
-
-                <i onClick={(event) => changeSlide(event)} className="fa-2xl fa-solid fa-chevron-left carousel__icon carousel__icon--previous"></i>
-                <i onClick={(event) => changeSlide(event)} className="fa-2xl fa-solid fa-chevron-right carousel__icon carousel__icon--next"></i>
+                <i onClick={previousSlide} className="fa-2xl fa-solid fa-chevron-left carousel__icon carousel__icon--previous"></i>
+                <i onClick={nextSlide} className="fa-2xl fa-solid fa-chevron-right carousel__icon carousel__icon--next"></i>
                 <div className='carousel__position' >{carouselPosition + 1}/{imgUrlArray.length}</div>
             </div>
         )
