@@ -10,7 +10,7 @@ import { Navigate } from 'react-router-dom'
 export default function Logement() {
     const { logementId } = useParams()
     const matchingLogement = LogementData.filter(logement => logement.id === logementId);
-    if (!matchingLogement) {
+    if (!matchingLogement[0]) {
         return <Navigate to="*" />
     }
     const logement = matchingLogement[0]
